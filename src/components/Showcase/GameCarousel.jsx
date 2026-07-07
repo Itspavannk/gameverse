@@ -1,4 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+const BASE = import.meta.env.BASE_URL;
+
 import {
   Pagination,
   Autoplay,
@@ -19,8 +21,8 @@ const games = [
     rating: "9.9",
     description:
       "Experience Vice City like never before in Rockstar's biggest open-world adventure.",
-    image: "/games/gta6.jpg",
-    video: "/videos/gta6.mp4",
+    image: `${BASE}videos/gta6.jpg`,
+    video: `${BASE}videos/gta6.mp4`,
   },
 
   {
@@ -30,8 +32,8 @@ const games = [
     rating: "9.7",
     description:
       "Explore Night City with breathtaking visuals and futuristic action.",
-    image: "/games/cyberpunk.jpg",
-    video: "/videos/cyberpunk.mp4",
+    image: `${BASE}videos/cyberpunk.jpg`,
+    video: `${BASE}videos/cyberpunk.mp4`,
   },
 
   {
@@ -41,8 +43,8 @@ const games = [
     rating: "9.8",
     description:
       "Become the Destined One in one of the most beautiful action RPGs ever created.",
-    image: "/games/wukong.jpg",
-    video: "/videos/wukong.mp4",
+    image: `${BASE}videos/wukong.jpg`,
+    video: `${BASE}videos/wukong.mp4`,
   },
 ];
 

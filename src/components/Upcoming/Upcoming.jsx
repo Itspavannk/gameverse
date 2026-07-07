@@ -1,4 +1,5 @@
 import { useState } from "react";
+const BASE = import.meta.env.BASE_URL;
 
 import "./Upcoming.css";
 
@@ -15,9 +16,9 @@ const games = [
 
     accent: "#00E5FF",
 
-    image: "/games/gta6.jpg",
+    image: `${BASE}games/gta6.jpg`,
 
-    video: "/videos/gta6.mp4",
+    video: `${BASE}videos/gta6.mp4`,
 
     description:
       "Experience Vice City like never before in Rockstar's biggest open world adventure."
@@ -34,9 +35,9 @@ const games = [
 
     accent: "#F97316",
 
-    image: "/games/ghost.jpg",
+    image: `${BASE}games/ghost.jpg`,
 
-    video: "/videos/ghost.mp4",
+    video: `${BASE}videos/ghost.mp4`,
 
     description:
       "Forge a new legend across breathtaking landscapes inspired by feudal Japan."
@@ -53,9 +54,9 @@ const games = [
 
     accent: "#EF4444",
 
-    image: "/games/re9.jpg",
+    image: `${BASE}games/re9.jpg`,
 
-    video: "/videos/re9.mp4",
+    video: `${BASE}videos/re9.mp4`,
 
     description:
       "A terrifying new survival horror experience built for next-generation consoles."
@@ -72,9 +73,9 @@ const games = [
 
     accent: "#FFD700",
 
-    image: "/games/marvel1943.jpg",
+    image: `${BASE}games/marvel1943.jpg`,
 
-    video: "/videos/marvel1943.mp4",
+    video: `${BASE}videos/marvel1943.mp4`,
 
     description:
       "Fight across occupied Paris in an epic Marvel adventure."
@@ -91,9 +92,9 @@ const games = [
 
     accent: "#A855F7",
 
-    image: "/games/witcher4.jpg",
+    image: `${BASE}games/witcher4.jpg`,
 
-    video: "/videos/witcher4.mp4",
+    video: `${BASE}videos/witcher4.mp4`,
 
     description:
       "Begin a brand-new saga in the Witcher universe with stunning visuals."

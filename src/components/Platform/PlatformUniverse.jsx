@@ -1,5 +1,7 @@
 import "./Platform.css";
 import { useState } from "react";
+const BASE = import.meta.env.BASE_URL;
+
 
 import PlatformTabs from "./PlatformTabs";
 import PlatformContent from "./PlatformContent";
@@ -9,8 +11,8 @@ const platforms = [
     id: "playstation",
     name: "PlayStation",
     color: "#0070F3",
-    logo: "/platforms/playstation.png",
-    controller: "/platforms/ps-controller.png",
+    logo: `${BASE}platforms/playstation.png`,
+    controller: `${BASE}platforms/ps-controller.png`,
     description:
       "Experience cinematic exclusives built for PlayStation 5.",
 
@@ -26,8 +28,8 @@ const platforms = [
     id: "xbox",
     name: "Xbox",
     color: "#16A34A",
-    logo: "/platforms/xbox.png",
-    controller: "/platforms/xbox-controller.png",
+    logo: `${BASE}platforms/xbox.png`,
+    controller: `${BASE}platforms/xbox-controller.png`,
 
     description:
       "Jump into Game Pass and Microsoft's biggest exclusives.",
@@ -45,9 +47,9 @@ const platforms = [
     name: "PC Gaming",
     color: "#00E5FF",
 
-    logo: "/platforms/pc.png",
+    logo: `${BASE}platforms/pc.png`,
 
-    controller: "/platforms/pc-controller.png",
+    controller: `${BASE}platforms/pc-controller.png`,
 
     description:
       "Unlimited performance with Steam, Epic and RTX graphics.",
@@ -66,9 +68,9 @@ const platforms = [
 
     color: "#E11D48",
 
-    logo: "/platforms/nintendo.png",
+    logo: `${BASE}platforms/nintendo.png`,
 
-    controller: "/platforms/switch.png",
+    controller: `${BASE}platforms/switch.png`,
 
     description:
       "Iconic adventures designed for every generation.",

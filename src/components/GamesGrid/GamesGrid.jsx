@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import "./GamesGrid.css";
+const BASE = import.meta.env.BASE_URL;
 
 const games = [
   {
@@ -13,7 +14,7 @@ const games = [
     tag: "GOTY",
     tagColor: "#FFD700",
     accent: "#C084FC",
-    image: "/games/eldenring.jpg",
+    image: `${BASE}games/eldenring.jpg`,
     description: "An open-world masterpiece forged from darkness and legend.",
     size: "large",
   },
@@ -27,7 +28,7 @@ const games = [
     tag: "TRENDING",
     tagColor: "#00E5FF",
     accent: "#00E5FF",
-    image: "/games/cyberpunk.jpg",
+    image: `${BASE}games/eldenring.jpg`,
     description: "Neon-drenched open world of crime and corporate warfare.",
     size: "medium",
   },
@@ -41,7 +42,7 @@ const games = [
     tag: "NEW",
     tagColor: "#4ADE80",
     accent: "#4ADE80",
-    image: "/games/wukong.jpg",
+    image: `${BASE}games/eldenring.jpg`,
     description: "Ancient mythology reimagined through breathtaking action.",
     size: "medium",
   },
@@ -55,7 +56,7 @@ const games = [
     tag: "MASTERPIECE",
     tagColor: "#A78BFA",
     accent: "#A78BFA",
-    image: "/games/bg3.jpg",
+    image: `${BASE}games/eldenring.jpg`,
     description: "The definitive RPG of a generation. Every choice matters.",
     size: "small",
   },
@@ -69,7 +70,7 @@ const games = [
     tag: "COMING SOON",
     tagColor: "#F97316",
     accent: "#F97316",
-    image: "/games/gta6.jpg",
+    image: `${BASE}games/eldenring.jpg`,
     description: "Return to Vice City in Rockstar's most ambitious world yet.",
     size: "wide",
   },
@@ -83,7 +84,7 @@ const games = [
     tag: "ESPORTS",
     tagColor: "#FF4655",
     accent: "#FF4655",
-    image: "/games/valorant.jpg",
+    image: `${BASE}games/eldenring.jpg`,
     description: "Precision gunplay meets tactical hero abilities.",
     size: "small",
   },
