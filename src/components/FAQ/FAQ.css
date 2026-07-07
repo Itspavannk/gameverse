@@ -1,0 +1,399 @@
+/* ===========================
+   FAQ SECTION
+=========================== */
+
+.faq-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 8%;
+
+    background:
+    radial-gradient(circle at 15% 20%,rgba(0,229,255,.08),transparent 35%),
+    radial-gradient(circle at 85% 70%,rgba(168,85,247,.08),transparent 40%),
+    linear-gradient(180deg,#030712 0%,#050816 50%,#02040c 100%);
+
+}
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+.faq-header{
+
+    max-width:800px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+.faq-header span{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    color:#00E5FF;
+
+    letter-spacing:3px;
+
+    font-size:.85rem;
+
+    margin-bottom:25px;
+
+}
+
+.faq-header h2{
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    font-weight:800;
+
+    line-height:1;
+
+    color:white;
+
+}
+
+.faq-header p{
+
+    margin-top:25px;
+
+    color:#9ca3af;
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ===========================
+   FAQ LIST
+=========================== */
+
+.faq-list{
+
+    width:min(1100px,100%);
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+/* ===========================
+   FAQ CARD
+=========================== */
+
+.faq-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.045);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.35);
+
+}
+
+
+/* animated glow border */
+
+.faq-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:inherit;
+
+    padding:1px;
+
+    pointer-events:none;   /* <-- ADD THIS */
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,229,255,.65),
+        rgba(168,85,247,.65),
+        transparent
+    );
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+
+
+/* ===========================
+   QUESTION
+=========================== */
+
+.faq-question{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:22px 30px;
+
+    background:transparent;
+    border:none;
+    cursor:pointer;
+
+    text-align:left;
+
+    appearance:none;
+    -webkit-appearance:none;
+}
+
+.faq-left{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex:1;
+}
+
+.faq-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.4rem;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(0,229,255,.18),
+    rgba(168,85,247,.18));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.faq-card:hover .faq-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    box-shadow:
+    0 0 35px rgba(0,229,255,.25);
+
+}
+
+.faq-left h3{
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    text-align:left;
+
+    color:white;
+
+}
+
+
+/* ===========================
+   PLUS BUTTON
+=========================== */
+
+.faq-plus{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#00E5FF;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.faq-card:hover .faq-plus{
+
+    background:#00E5FF;
+
+    color:#050816;
+
+    box-shadow:
+    0 0 30px rgba(0,229,255,.4);
+
+}
+
+
+/* ===========================
+   ANSWER
+=========================== */
+
+.faq-answer{
+
+    overflow:hidden;
+
+}
+
+.faq-answer p{
+
+    padding:0 40px 38px 96px;
+
+    color:#b7bcc8;
+
+    line-height:1.9;
+
+    font-size:1.02rem;
+
+}
+
+
+/* ===========================
+   ACTIVE CARD
+=========================== */
+
+.faq-card.active{
+
+    border-color:rgba(0,229,255,.35);
+
+    box-shadow:
+
+    0 0 70px rgba(0,229,255,.08),
+
+    0 25px 80px rgba(0,0,0,.35);
+
+}
+
+.faq-card.active::before{
+
+    opacity:1;
+
+}
+
+
+/* ===========================
+   BOTTOM CTA
+=========================== */
+
+.faq-bottom{
+
+    margin-top:120px;
+
+    text-align:center;
+
+}
+
+.faq-bottom h3{
+
+    font-size:2.3rem;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+.faq-bottom p{
+
+    color:#9ca3af;
+
+    margin-bottom:35px;
+
+}
+
+.faq-bottom button{
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #00E5FF,
+    #7C3AED);
+
+    transition:.35s;
+
+}
+
+.faq-bottom button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 20px 60px rgba(0,229,255,.35);
+
+}

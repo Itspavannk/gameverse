@@ -1,0 +1,1154 @@
+/* =====================================================
+   PLATFORM SECTION
+===================================================== */
+
+.platform-section{
+
+position:relative;
+
+padding:160px 6%;
+
+background:
+radial-gradient(circle at 15% 20%,rgba(0,229,255,.08),transparent 35%),
+radial-gradient(circle at 85% 80%,rgba(168,85,247,.08),transparent 35%),
+#030014;
+
+overflow:hidden;
+
+}
+
+.platform-section::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+to bottom,
+transparent,
+rgba(255,255,255,.02),
+transparent
+);
+
+pointer-events:none;
+
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.platform-header{
+
+text-align:center;
+
+margin-bottom:80px;
+
+}
+
+.platform-header span{
+
+font-family:"Orbitron",sans-serif;
+
+color:#00E5FF;
+
+letter-spacing:6px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+.platform-header h2{
+
+margin-top:18px;
+
+font-size:72px;
+
+font-family:"Orbitron",sans-serif;
+
+font-weight:900;
+
+color:white;
+
+}
+
+.platform-header p{
+
+margin-top:20px;
+
+font-size:18px;
+
+color:#94a3b8;
+
+}
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.platform-tabs{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-bottom:70px;
+
+}
+
+.platform-tab{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:18px 28px;
+
+border-radius:50px;
+
+border:1px solid rgba(255,255,255,.12);
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+cursor:pointer;
+
+transition:.35s;
+
+color:white;
+
+font-family:"Orbitron",sans-serif;
+
+}
+.platform-tab{
+
+position:relative;
+
+width:260px;
+
+height:120px;
+
+padding:0;
+
+overflow:hidden;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,.08);
+
+background:#111827;
+
+cursor:pointer;
+
+}
+
+.platform-bg{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.platform-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+to top,
+
+rgba(0,0,0,.75),
+
+rgba(0,0,0,.2)
+
+);
+
+}
+
+.platform-info{
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+top:0;
+
+bottom:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:3;
+
+}
+
+.platform-info h3{
+
+font-size:34px;
+
+font-family:"Orbitron";
+
+font-weight:800;
+
+color:white;
+
+text-shadow:
+
+0 5px 20px black;
+
+}
+
+.platform-tab:hover .platform-bg{
+
+transform:scale(1.08);
+
+}
+
+.platform-line{
+
+position:absolute;
+
+left:25px;
+
+right:25px;
+
+bottom:8px;
+
+height:4px;
+
+border-radius:50px;
+
+}
+
+.platform-tab.active{
+
+box-shadow:
+
+0 0 40px rgba(0,229,255,.3);
+
+border-color:#00E5FF;
+
+}
+
+.platform-tab:hover{
+
+transform:translateY(-4px);
+
+background:rgba(255,255,255,.08);
+
+}
+
+.platform-tab.active{
+
+background:rgba(255,255,255,.08);
+
+}
+
+.platform-active-bar{
+
+position:absolute;
+
+left:18px;
+
+right:18px;
+
+bottom:6px;
+
+height:3px;
+
+border-radius:20px;
+
+}
+
+/* =====================================================
+   CONTENT LAYOUT
+===================================================== */
+
+.platform-content{
+
+display:grid;
+
+grid-template-columns:1fr 520px;
+
+align-items:center;
+
+gap:80px;
+
+min-height:720px;
+
+position:relative;
+
+}
+/* =====================================================
+   LEFT
+===================================================== */
+
+.platform-left{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+max-width: 70%;
+
+}
+
+.platform-badge{
+
+font-family:"Orbitron",sans-serif;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+margin-bottom:22px;
+
+}
+
+.platform-left h2{
+
+font-family:"Orbitron",sans-serif;
+
+font-size:58px;
+
+font-weight:900;
+
+line-height:1;
+
+color:white;
+
+margin-bottom:28px;
+
+}
+
+.platform-left p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#94a3b8;
+
+margin-bottom:35px;
+
+max-width:520px;
+
+}
+
+/* =====================================================
+   GAMES
+===================================================== */
+
+.platform-games{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+margin-bottom:40px;
+
+}
+
+.platform-game{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+font-size:17px;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.platform-game svg{
+
+font-size:18px;
+
+}
+
+.platform-game:hover{
+
+transform:translateX(10px);
+
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.platform-btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+width:260px;
+
+height:60px;
+
+border:none;
+
+border-radius:60px;
+
+font-family:"Orbitron",sans-serif;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+cursor:pointer;
+
+transition:.35s;
+
+color:white;
+
+}
+
+.platform-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 0 35px rgba(255,255,255,.25);
+
+}
+
+/* =====================================================
+   CENTER
+===================================================== */
+
+.platform-center{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+height:650px;
+
+}
+
+/* =====================================================
+   CONTROLLER RING
+===================================================== */
+
+.controller-ring{
+
+position:relative;
+
+width:420px;
+
+height:420px;
+
+border-radius:50%;
+
+border:2px solid;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:visible;
+
+}
+
+/* Glow */
+
+.controller-glow{
+
+position:absolute;
+
+width:320px;
+
+height:320px;
+
+border-radius:50%;
+
+filter:blur(110px);
+
+opacity:.18;
+
+animation:ringGlow 4s ease-in-out infinite;
+
+}
+
+/* Outer Ring */
+
+.controller-ring::before{
+
+content:"";
+
+position:absolute;
+
+width:520px;
+
+height:520px;
+
+border-radius:50%;
+
+border:1px solid rgba(255,255,255,.08);
+
+animation:rotateRing 30s linear infinite;
+
+}
+
+/* Inner Ring */
+
+.controller-ring::after{
+
+content:"";
+
+position:absolute;
+
+width:340px;
+
+height:340px;
+
+border-radius:50%;
+
+border:1px dashed rgba(255,255,255,.10);
+
+animation:rotateReverse 22s linear infinite;
+
+}
+
+/* =====================================================
+   CONTROLLER TARGET
+===================================================== */
+
+#platform-controller-target{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:visible;
+    z-index:5;
+}
+
+/* =====================================================
+   BACKGROUND ORBS
+===================================================== */
+
+.platform-section::after{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+right:-250px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+background:
+
+radial-gradient(circle,
+rgba(255,255,255,.04),
+transparent 70%);
+
+filter:blur(90px);
+
+pointer-events:none;
+
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes rotateRing{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes rotateReverse{
+
+from{
+
+transform:rotate(360deg);
+
+}
+
+to{
+
+transform:rotate(0deg);
+
+}
+
+}
+
+@keyframes ringGlow{
+
+0%,100%{
+
+transform:scale(1);
+
+opacity:.15;
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+opacity:.30;
+
+}
+
+}
+
+/* =====================================================
+   HOVER EFFECTS
+===================================================== */
+
+.platform-content{
+    transition:all .45s ease;
+}
+
+.platform-content:hover{
+    transform:translateY(-6px);
+}
+
+.platform-left h2,
+.platform-left p,
+.platform-game,
+.platform-logo{
+    transition:all .4s ease;
+}
+
+
+
+.platform-content:hover .platform-left h2{
+    text-shadow:0 0 35px rgba(255,255,255,.25);
+}
+
+.platform-content:hover .platform-game{
+    opacity:.95;
+}
+
+/* =====================================================
+   GLASS PANEL
+===================================================== */
+
+.platform-left{
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    padding:45px;
+
+}
+
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.platform-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.platform-btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.5),
+
+transparent
+
+);
+
+transform:skewX(-20deg);
+
+transition:.8s;
+
+}
+
+.platform-btn:hover::before{
+
+left:160%;
+
+}
+
+.platform-btn:hover{
+
+transform:translateY(-5px) scale(1.03);
+
+}
+
+/* =====================================================
+   ACTIVE TAB
+===================================================== */
+
+.platform-tab.active{
+
+transform:translateY(-6px);
+
+}
+
+.platform-tab.active img{
+
+animation:floatLogo 3s ease-in-out infinite;
+
+}
+
+/* =====================================================
+   CONTROLLER TARGET
+===================================================== */
+
+#platform-controller-target{
+
+transition:all .4s ease;
+
+}
+
+.controller-ring:hover #platform-controller-target{
+
+transform:scale(1.04);
+
+}
+
+/* =====================================================
+   RING PULSE
+===================================================== */
+
+.controller-ring{
+
+animation:ringPulse 4s ease-in-out infinite;
+
+}
+
+@keyframes ringPulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+}
+
+/* =====================================================
+   FLOATING LOGO
+===================================================== */
+
+@keyframes floatLogo{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1300px){
+
+.platform-content{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+text-align:center;
+
+}
+
+.platform-left{
+
+max-width:100%;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.platform-left p{
+
+max-width:700px;
+
+}
+
+.platform-games{
+
+align-items:center;
+
+}
+
+.platform-btn{
+
+margin:auto;
+
+}
+
+.platform-center{
+
+height:500px;
+
+}
+
+.controller-ring{
+
+width:360px;
+
+height:360px;
+
+}
+
+.controller-ring::before{
+
+width:450px;
+
+height:450px;
+
+}
+
+.controller-ring::after{
+
+width:280px;
+
+height:280px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.platform-section{
+
+padding:90px 20px;
+
+}
+
+.platform-header h2{
+
+font-size:42px;
+
+}
+
+.platform-header p{
+
+font-size:16px;
+
+}
+
+.platform-tabs{
+
+gap:16px;
+
+}
+
+.platform-tab{
+
+width:100%;
+
+height:100px;
+
+}
+
+.platform-info h3{
+
+font-size:26px;
+
+}
+
+.platform-content{
+
+gap:40px;
+
+min-height:auto;
+
+}
+
+.platform-left{
+
+padding:28px;
+
+max-width:100%;
+
+}
+
+.platform-left h2{
+
+font-size:34px;
+
+}
+
+.platform-left p{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.platform-games{
+
+gap:14px;
+
+}
+
+.platform-game{
+
+font-size:15px;
+
+}
+
+.platform-btn{
+
+width:100%;
+
+height:54px;
+
+}
+
+.platform-center{
+
+height:320px;
+
+}
+
+.controller-ring{
+
+width:260px;
+
+height:260px;
+
+}
+
+.controller-ring::before{
+
+width:330px;
+
+height:330px;
+
+}
+
+.controller-ring::after{
+
+width:200px;
+
+height:200px;
+
+}
+
+.platform-center{
+    display:none;
+}
+
+}
+
+@media(max-width:480px){
+
+.platform-section{
+
+padding:70px 16px;
+
+}
+
+.platform-header h2{
+
+font-size:30px;
+
+}
+
+.platform-header p{
+
+font-size:15px;
+
+}
+
+.platform-tab{
+
+height:90px;
+
+}
+
+.platform-info h3{
+
+font-size:22px;
+
+}
+
+.platform-left{
+
+padding:22px;
+
+}
+
+.platform-left h2{
+
+font-size:28px;
+
+}
+
+.platform-left p{
+
+font-size:14px;
+
+}
+
+.platform-game{
+
+font-size:14px;
+
+}
+
+.platform-btn{
+
+height:50px;
+
+font-size:12px;
+
+}
+
+.platform-center{
+
+height:250px;
+
+}
+
+.controller-ring{
+
+width:200px;
+
+height:200px;
+
+}
+
+.controller-ring::before{
+
+width:260px;
+
+height:260px;
+
+}
+
+.controller-ring::after{
+
+width:150px;
+
+height:150px;
+
+}
+
+}

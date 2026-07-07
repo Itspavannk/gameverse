@@ -1,0 +1,459 @@
+
+.navbar {
+
+    position: fixed;
+
+    top: 22px;
+
+    left: 50%;
+
+
+    width: 90%;
+
+    max-width: 1450px;
+
+    height: 72px;
+
+    z-index: 999;
+
+    border-radius: 999px;
+
+    background: rgba(8, 12, 24, 0.55);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.45),
+        0 0 30px rgba(0,229,255,.08),
+        inset 0 1px 1px rgba(255,255,255,.08);
+
+    transition: all .35s ease;
+}
+
+.navbar:hover{
+
+    border-color:#00E5FF;
+
+    box-shadow:
+        0 0 30px rgba(0,229,255,.25),
+        0 15px 45px rgba(0,0,0,.55);
+}
+
+/* ========================= */
+
+.navbar-container{
+
+    position:relative;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 35px;
+}
+
+/* ========================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    font-family:"Orbitron";
+
+    transition:.35s;
+}
+
+.logo svg{
+
+    font-size:32px;
+
+    color:#00E5FF;
+}
+
+.logo:hover{
+
+    color:#00E5FF;
+
+    transform:scale(1.05);
+}
+
+/* ========================= */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:45px;
+    
+}
+
+.nav-links a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:#d1d5db;
+
+     font-family:"Orbitron";
+
+    font-size:20px;
+    font-weight:500;
+
+    transition:.35s;
+}
+
+.nav-links a:hover{
+
+    color:white;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    border-radius:20px;
+
+    background:#00E5FF;
+
+    box-shadow:0 0 12px #00E5FF;
+
+    transition:.35s;
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+}
+
+.nav-links .active{
+
+    color:#00E5FF;
+}
+
+.nav-links .active::after{
+
+    width:100%;
+}
+
+/* ========================= */
+
+.nav-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.icon-btn{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.icon-btn svg{
+
+    font-size:20px;
+}
+
+.icon-btn:hover{
+
+    background:#00E5FF;
+
+    color:black;
+
+    transform:translateY(-3px) scale(1.08);
+
+    box-shadow:0 0 20px rgba(0,229,255,.5);
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-btn{
+
+    display:none;
+
+    position:absolute;
+
+    right:30px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.menu-btn svg{
+
+    font-size:20px;
+
+}
+
+.menu-btn:hover{
+
+    background:#00E5FF;
+
+    color:#050816;
+
+    box-shadow:0 0 20px rgba(0,229,255,.45);
+
+}
+/* ==========================================
+            MOBILE MENU
+========================================== */
+
+.mobile-menu{
+
+    display:none;
+
+    position:absolute;
+
+    top:82px;
+
+    left:0;
+
+    width:100%;
+
+    padding:25px;
+
+    border-radius:28px;
+
+    background:rgba(8,12,24,.92);
+
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 40px rgba(0,229,255,.08);
+
+    flex-direction:column;
+
+    gap:17px;
+
+    overflow:hidden;
+
+    z-index:998;
+
+}
+
+.mobile-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:58px;
+
+    text-decoration:none;
+
+    font-family:"Orbitron";
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    border-radius:16px;
+
+    transition:.35s;
+
+}
+
+.mobile-menu a:hover{
+
+    color:#00E5FF;
+
+    background:rgba(0,229,255,.08);
+
+    box-shadow:
+        inset 0 0 25px rgba(0,229,255,.08);
+
+}
+
+.mobile-menu .active{
+
+    color:#00E5FF;
+
+    background:rgba(0,229,255,.12);
+
+}
+/* ========================= */
+
+@media (max-width:1440px){
+
+    .navbar{
+        width:95%;
+    }
+
+    .nav-links{
+        gap:36px;
+    }
+
+    .nav-links a{
+        font-size:18px;
+    }
+
+}
+
+@media (max-width:1280px){
+
+    .navbar{
+        height:68px;
+    }
+
+    .navbar-container{
+        padding:0 24px;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .logo svg{
+        font-size:28px;
+    }
+
+    .nav-links{
+        gap:28px;
+    }
+
+    .nav-links a{
+        font-size:17px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar{
+
+        width:96%;
+        height:64px;
+
+    }
+
+    .navbar-container{
+
+        padding:0 18px;
+
+    }
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+    .logo svg{
+
+        font-size:26px;
+
+    }
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .nav-icons{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:flex;
+
+    }
+
+    .mobile-menu{
+
+        display:flex;
+
+    }
+
+}

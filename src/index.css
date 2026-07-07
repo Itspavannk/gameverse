@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #050816;
+  color: white;
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+button,
+a {
+    cursor: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.floating-controller{
+
+    width:700px;
+
+    height:700px;
+
+    position:relative;
+}
+
+.controller-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+=========================== */
+
+/* Large Laptop */
+@media (max-width: 1440px) {
+
+}
+
+/* Laptop */
+@media (max-width: 1280px) {
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+}
+
+/* Large Mobile */
+@media (max-width: 768px) {
+
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+
+}

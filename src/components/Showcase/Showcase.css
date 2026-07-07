@@ -1,0 +1,612 @@
+.showcase {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 5%;
+  position: relative;
+  background: radial-gradient(circle at left, #111827 0%, #050816 60%);
+}
+
+.showcase-left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controller-placeholder {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+
+  position: absolute;
+  left: 115px;
+  top: 35%;
+  overflow: visible;
+}
+
+.showcase-right {
+  width: 48%;
+}
+
+.section-tag {
+  color: #00E5FF;
+  letter-spacing: 5px;
+  font-size: 14px;
+}
+
+.showcase-right h2 {
+  margin-top: 20px;
+  color: white;
+  font-size: 70px;
+  line-height: 1.1;
+}
+
+/* ===========================
+   GAME CAROUSEL
+=========================== */
+
+.swiper{
+    width:100%;
+    margin-top:40px;
+    overflow:visible;
+}
+
+.swiper-slide{
+    overflow:visible;
+}
+
+.swiper-pagination{
+    bottom:-25px !important;
+}
+
+.swiper-pagination-bullet{
+    width:10px;
+    height:10px;
+    background:#ffffff55;
+    opacity:1;
+}
+
+.swiper-pagination-bullet-active{
+    background:#00E5FF;
+    width:30px;
+    border-radius:50px;
+}
+
+/* ===========================
+   SLIDE
+=========================== */
+
+.game-slide{
+
+display:flex;
+
+align-items:center;
+
+height:520px;
+
+border-radius:35px;
+
+overflow:hidden;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(25px);
+
+box-shadow:
+0 20px 80px rgba(0,0,0,.45);
+
+}
+
+/* ===========================
+   LEFT COVER
+=========================== */
+
+.cover-panel{
+
+width:35%;
+
+height:100%;
+
+padding:12px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+perspective:1000px;
+
+}
+
+.game-cover{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:24px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.5);
+
+transition:.5s;
+
+}
+
+.cover-panel:hover .game-cover{
+
+transform:
+scale(1);
+
+}
+
+.cover-glow{
+
+position:absolute;
+
+width:70%;
+
+height:70%;
+
+background:#00e5ff44;
+
+filter:blur(80px);
+
+z-index:-1;
+
+}
+
+/* ===========================
+   RIGHT VIDEO
+=========================== */
+
+.video-panel{
+
+position:relative;
+
+width:70%;
+
+height:100%;
+
+overflow:hidden;
+
+}
+
+.game-video{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.8s;
+
+}
+
+.game-slide:hover .game-video{
+
+transform:scale(1.05);
+
+}
+
+/* ===========================
+   VIDEO OVERLAY
+=========================== */
+
+.video-gradient{
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+to top,
+rgba(0,0,0,.95),
+rgba(0,0,0,.65),
+rgba(0,0,0,.2),
+transparent
+),
+
+linear-gradient(
+to right,
+rgba(0,0,0,.65),
+transparent 45%
+);
+
+}
+
+/* ===========================
+   CONTENT ON VIDEO
+=========================== */
+
+.video-content{
+
+position:absolute;
+
+left:45px;
+
+bottom:45px;
+
+z-index:10;
+
+max-width:70%;
+
+}
+
+.top-badges{
+
+display:flex;
+
+gap:24px;
+
+margin-bottom:18px;
+
+}
+
+.genre,
+.rating{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(12px);
+
+color:white;
+
+font-weight:600;
+
+}
+
+.video-content h1{
+
+font-size:42px;
+
+color:white;
+
+margin-bottom:10px;
+
+font-weight:900;
+
+}
+
+.video-content h3{
+
+font-size:20px;
+
+color:#00E5FF;
+
+margin-bottom:20px;
+
+}
+
+.video-content p{
+
+color:#d1d5db;
+
+font-size:17px;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+max-width:620px;
+
+}
+
+.video-buttons{
+
+display:flex;
+
+gap:18px;
+
+}
+
+.play-btn{
+
+padding:14px 34px;
+
+border:none;
+
+border-radius:40px;
+
+background:#00E5FF;
+
+color:black;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+transition:.35s;
+
+}
+
+.play-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 0 30px #00E5FF;
+
+}
+
+.wish-btn{
+
+padding:10px 19px;
+
+border-radius:40px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+transition:.35s;
+
+}
+
+.wish-btn:hover{
+
+background:white;
+
+color:black;
+
+}
+
+@media (max-width:1280px){
+
+.showcase{
+
+    padding:100px 4%;
+    gap:40px;
+
+}
+
+.showcase-right h2{
+
+    font-size:56px;
+
+}
+
+.controller-placeholder{
+
+    width:420px;
+    height:420px;
+
+    left:40px;
+
+}
+
+.video-content h1{
+
+    font-size:36px;
+
+}
+
+}
+
+@media (max-width:1024px){
+
+.showcase{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:60px;
+
+}
+
+.showcase-left{
+
+    display:none;
+
+}
+
+.showcase-right{
+
+    width:100%;
+
+}
+
+.showcase-right h2{
+
+    font-size:48px;
+
+}
+
+.video-content{
+
+    max-width:85%;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.showcase{
+
+    padding:80px 20px;
+
+}
+
+.showcase-right h2{
+
+    font-size:38px;
+
+}
+
+.game-slide{
+
+    flex-direction:column;
+
+    height:auto;
+
+}
+
+.cover-panel{
+
+    width:100%;
+    height:260px;
+
+}
+
+.video-panel{
+
+    width:100%;
+    height:380px;
+
+}
+
+.video-content{
+
+    left:25px;
+    right:25px;
+
+    bottom:25px;
+
+    max-width:100%;
+
+}
+
+.video-content h1{
+
+    font-size:30px;
+
+}
+
+.video-content h3{
+
+    font-size:18px;
+
+}
+
+.video-content p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+.video-buttons{
+
+    flex-direction:column;
+
+}
+
+.play-btn,
+.wish-btn{
+
+    width:100%;
+    justify-content:center;
+
+}
+
+}
+
+
+@media (max-width:480px){
+
+.showcase{
+
+    padding:70px 16px;
+
+}
+
+.showcase-right h2{
+
+    font-size:25px;
+
+}
+
+.top-badges{
+
+    gap:5px;
+
+    flex-wrap:wrap;
+
+}
+
+.genre,
+.rating{
+
+    font-size:13px;
+
+    padding:4px 10px;
+
+}
+
+.video-content h1{
+
+    font-size:20px;
+
+}
+
+.video-content p{
+
+    font-size:12px;
+
+}
+
+.cover-panel{
+
+    height:220px;
+
+}
+
+.video-panel{
+
+    height:320px;
+
+}
+
+.play-btn,
+.wish-btn{
+padding: 6px 6px ;
+}
+
+}
