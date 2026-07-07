@@ -21,7 +21,7 @@ const games = [
     rating: "9.9",
     description:
       "Experience Vice City like never before in Rockstar's biggest open-world adventure.",
-    image: `${BASE}videos/gta6.jpg`,
+    image: `${BASE}games/gta6.jpg`,
     video: `${BASE}videos/gta6.mp4`,
   },
 
@@ -32,7 +32,7 @@ const games = [
     rating: "9.7",
     description:
       "Explore Night City with breathtaking visuals and futuristic action.",
-    image: `${BASE}videos/cyberpunk.jpg`,
+    image: `${BASE}games/cyberpunk.jpg`,
     video: `${BASE}videos/cyberpunk.mp4`,
   },
 
@@ -43,7 +43,7 @@ const games = [
     rating: "9.8",
     description:
       "Become the Destined One in one of the most beautiful action RPGs ever created.",
-    image: `${BASE}videos/wukong.jpg`,
+    image: `${BASE}games/wukong.jpg`,
     video: `${BASE}videos/wukong.mp4`,
   },
 ];
