@@ -4,11 +4,13 @@ import { useEffect, useRef } from "react";
 
 export const controllerRef = { current: null };
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Controller() {
   const moveGroup = useRef();
   const rotateGroup = useRef();
 
-  const { scene } = useGLTF("/models/controller.glb");
+  const { scene } = useGLTF(`${BASE}models/controller.glb`);
 
   const mouse = useRef({ x: 0, y: 0 });
 
@@ -26,8 +28,10 @@ export default function Controller() {
 
   useFrame(() => {
     if (!rotateGroup.current) return;
+
     rotateGroup.current.rotation.y +=
       (mouse.current.x * 0.6 - rotateGroup.current.rotation.y) * 0.08;
+
     rotateGroup.current.rotation.x +=
       (mouse.current.y * 0.3 - rotateGroup.current.rotation.x) * 0.08;
   });
@@ -38,7 +42,6 @@ export default function Controller() {
       position={[1.2, 0, 1]}
       scale={[1.5, 1.5, 1.5]}
     >
-
       <group ref={rotateGroup} rotation={[-0.3, Math.PI, 0]}>
         <primitive object={scene} />
       </group>
@@ -46,4 +49,4 @@ export default function Controller() {
   );
 }
 
-useGLTF.preload("/models/controller.glb");
+useGLTF.preload(`${BASE}models/controller.glb`);
