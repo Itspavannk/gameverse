@@ -1,4 +1,3 @@
-import { Link,} from "react-router-dom";
 import { FaGamepad, FaSearch, FaUserCircle } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";import { useEffect, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -78,10 +77,13 @@ export default function Navbar() {
     >
       <div className="navbar-container">
 
-        <Link to="/" className="logo">
-          <FaGamepad />
-          <span>GAMEVERSE</span>
-        </Link>
+<button
+  className="logo"
+  onClick={() => scrollToSection("home")}
+>
+  <FaGamepad />
+  <span>GAMEVERSE</span>
+</button>
 
 <div className="nav-links">
 
@@ -155,7 +157,7 @@ export default function Navbar() {
       <button onClick={() => scrollToSection("platform")}>
         Platform
       </button>
-      
+
     </motion.div>
   )}
 </AnimatePresence>

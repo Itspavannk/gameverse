@@ -82,6 +82,10 @@
     font-family:"Orbitron";
 
     transition:.35s;
+    background:none;
+    border:none;
+    cursor:pointer;
+
 }
 
 .logo svg{
