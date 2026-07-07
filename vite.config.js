@@ -8,5 +8,7 @@ export default defineConfig({
     tailwindcss(),
   ],
 
-  base: "/gameverse/",
+  base: process.env.NODE_ENV === "production"
+    ? "/gameverse/"
+    : "/",
 });
